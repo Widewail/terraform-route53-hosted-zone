@@ -14,6 +14,10 @@ variable "alias" {
     dns_name = string
     zone_id  = string
   })
+  default = {
+    dns_name = ""
+    zone_id = ""
+  }
 }
 
 variable "records" {

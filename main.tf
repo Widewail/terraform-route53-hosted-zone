@@ -5,7 +5,7 @@ resource "aws_route53_zone" "primary" {
 }
 
 resource "aws_route53_record" "alias" {
-  count   = length(var.alias) > 0 ? 1 : 0
+  count   = length(var.alias.dns_name) > 0 ? 1 : 0
   zone_id = aws_route53_zone.primary.zone_id
   name    = var.domain
   type    = "A"
